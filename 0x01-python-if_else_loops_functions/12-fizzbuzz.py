@@ -9,7 +9,7 @@ multiples of both 3 and 5 print FizzBuzz
 
 
 def fizzbuzz():
-    for num in range(1, 99):
+    for num in range(1, 100):
         if (num % 15 == 0):
             print("FizzBuzz", end=" ")
         elif (num % 3 == 0):
