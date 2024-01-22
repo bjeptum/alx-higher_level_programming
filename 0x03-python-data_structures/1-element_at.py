@@ -9,7 +9,7 @@ def element_at(my_list, idx):
     elem = my_list[idx]
     if idx < 0:
         return None
-    elif idx > length:
+    elif idx >= length:
         return None
     else:
         return elem
