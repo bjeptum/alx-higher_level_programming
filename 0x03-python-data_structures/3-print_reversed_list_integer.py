@@ -6,6 +6,8 @@ In reverse order
 
 
 def print_reversed_list_integer(my_list=[]):
+    if my_list is None:
+        return
     new_list = my_list[::-1]
     for num in new_list:
         print("{:d}".format(num), sep="\n")
