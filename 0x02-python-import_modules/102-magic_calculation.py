@@ -5,7 +5,7 @@ from magic_calculation_102 import add, sub
 
 def magic_calculation(a, b):
     if a < b:
-        return add(a,b)
+        return add(a, b)
     elif a > b:
         c = sub(a, b)
         if c < 4:
