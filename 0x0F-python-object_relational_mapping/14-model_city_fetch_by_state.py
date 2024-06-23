@@ -27,5 +27,5 @@ if __name__ == '__main__':
 
     # Query database and print results
     results = session.query(Cities.order_by(City.id)
-    for state in results:
-        print(f"{state.id}: {state.name}")
+    for city in results:
+        print(f"{city.id}: {city.name}")
