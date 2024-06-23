@@ -15,7 +15,7 @@ if __name__ == "__main__":
                          user=argv[1], passwd=argv[2],
                          db=argv[3], port=3306)
     curx = db.cursor()
-    curx.execute("SELECT * FROM states ORDER BY id ASC"))
+    curx.execute("SELECT * FROM states ORDER BY id ASC")
     rows = curx.fetchall()
     for row in rows:
         print(row)
