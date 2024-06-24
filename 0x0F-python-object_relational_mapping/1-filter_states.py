@@ -18,9 +18,7 @@ if __name__ == "__main__":
     # Create cursor
     curx = db.cursor()
     # Execute select to query data
-    curx.execute("SELECT * FROM states WHERE name LIKE 'N%'
-                 COLLATE SQL_Latin1_General_CP1_CS_AS
-                 ORDER BY id ASC")
+    curx.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
     rows = curx.fetchall()
     for row in rows:
         print(row)
