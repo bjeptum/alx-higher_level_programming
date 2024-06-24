@@ -18,7 +18,7 @@ if __name__ == "__main__":
     # Create cursor
     curx = db.cursor()
     # Execute select to query data
-    curx.execute("SELECT * FROM states WHERE name LIKE 'N%' AND BINARY
+    curx.execute("SELECT * FROM states WHERE name LIKE 'N%' AND
                  name NOT LIKE 'n%' ORDER BY id ASC")
     rows = curx.fetchall()
     for row in rows:
