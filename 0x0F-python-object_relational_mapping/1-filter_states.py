@@ -15,13 +15,20 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host="localhost",
                          user=argv[1], passwd=argv[2],
                          db=argv[3], port=3306)
-    # Create cursor
-    curx = db.cursor()
-    # Execute select to query data
-    curx.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
-    rows = curx.fetchall()
-    for row in rows:
-        print(row)
-        # Close  cursor and db
-    curx.close()
-    db.close()
+    try:
+        # Create cursor
+        curx = db.cursor()
+        # Execute select to query data
+        curx.execute("SELECT * FROM states WHERE name LIKE 'N%' AND BINARY
+                     name NOT LIKE 'n%' ORDER BY id ASC")
+        rows = curx.fetchall()
+        for row in rows:
+            print(row)
+    except MySQLdb.Error as e:
+        print("Error:", e)
+    finally:
+        # Close cursor and db
+        if 'curx' in locals():
+            curx.close()
+        if db.open:
+            db.close()
