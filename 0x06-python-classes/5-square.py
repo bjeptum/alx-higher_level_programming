@@ -11,7 +11,7 @@ class Square:
     """
     def __init__(self, size=0):
         " Class instantiator"
-        self.size = size
+        self.__size = size
 
     @property
     def size(self):
@@ -35,8 +35,8 @@ class Square:
 
     def my_print(self):
         " Prints in stdout the square with #"
-        if size == 0:
+        if self.__size == 0:
             print("")
         else:
-            for _ in range(size):
-                print("#" * size)
+            for _ in range(self.__size):
+                print("#" * self.__size)
