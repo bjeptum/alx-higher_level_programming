@@ -4,15 +4,17 @@ Lists all prints from the database
 """
 
 from sys import argv
-from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, sessionmaker
-from sqlalchemy import Column, Integer, String, create_engine, MetaData
-from sqlalchemy.engine import result
+from sqlalchemy import create_engine
 from model_state import Base, State
 from model_city import City
 
 
 if __name__ == '__main__':
+
+    # Check for correct number of arguments
+    if len(argv) != 4:
+        exit(1)
 
     # Connect to MySQL server running on localhost
     username, password, database = argv[1], argv[2], argv[3]
@@ -26,6 +28,7 @@ if __name__ == '__main__':
     session = Session()
 
     # Query database and print results
-    results = session.query(Cities.order_by(City.id))
+    results = session.query(City).order_by(City.id).all()
     for city in results:
+        state = session.query(State).filter(State.id == city.state_id).first()
         print(f"{state name}: {city.id} {city.name}")
