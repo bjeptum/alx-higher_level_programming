@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-# City module
+"""
+City module
+"""
 
 from sys import argv
 from sqlalchemy.ext.declarative import declarative_base
@@ -8,7 +10,7 @@ from sqlalchemy import Column, Integer, String, create_engine, ForeignKey
 from model_state import Base
 
 
-class City(Base, State):
+class City(State):
     """Class definition of City"""
     __tablename__ = 'cities'
 
