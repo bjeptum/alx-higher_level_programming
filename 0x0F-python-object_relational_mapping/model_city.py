@@ -10,10 +10,11 @@ from sqlalchemy import Column, Integer, String, create_engine, ForeignKey
 from model_state import Base
 
 
-class City(State):
+class City(Base, State):
     """Class definition of City"""
     __tablename__ = 'cities'
 
+    # Attributes
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
     state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
