@@ -10,7 +10,7 @@ from sqlalchemy import Column, Integer, String, create_engine, ForeignKey
 from model_state import Base
 
 
-class City(Base):
+class City(State):
     """Class definition of City"""
     __tablename__ = 'cities'
 
