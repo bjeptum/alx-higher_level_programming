@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-City module
-"""
+# City module
 
 from sys import argv
 from sqlalchemy.ext.declarative import declarative_base
