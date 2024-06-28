@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Defining City module
+City module
 """
 
 
