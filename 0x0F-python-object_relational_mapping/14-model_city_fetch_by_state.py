@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Lists all prints from the database
+Prints all Cities from the database
 """
 
 from sys import argv
@@ -11,10 +11,6 @@ from model_city import City
 
 
 if __name__ == '__main__':
-
-    # Check for correct number of arguments
-    if len(argv) != 4:
-        exit(1)
 
     # Connect to MySQL server running on localhost
     username, password, database = argv[1], argv[2], argv[3]
