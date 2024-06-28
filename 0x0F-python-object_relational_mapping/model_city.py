@@ -3,7 +3,6 @@
 Defining City module
 """
 
-
 from sys import argv
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
