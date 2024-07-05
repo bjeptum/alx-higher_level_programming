@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """
-Takes in URL, sends a request
-Displays the value of the X-Request-Id variable
+Take in a URL, sends a request to the URL
+Display the value of the X-Request-Id variable,
 found in the header of the response
 """
 import sys
-import urrlib.request
+import urllib.request
 
 
 if __name__ == "__main__":
