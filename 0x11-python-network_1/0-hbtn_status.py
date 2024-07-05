@@ -16,4 +16,3 @@ if __name__ == '__main__':
         print(f"\t- type: {body_type}")
         print(f"\t- content: {html}")
         print(f"\t- utf8 content: {body_content}")
-
