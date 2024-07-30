@@ -23,25 +23,25 @@ request(url, (error, response, body) => {
     }
 
     // Print characters from the movie
-	const characters = movie.characters;
-	const promises = characters.map(characterUrl => {
-		return new Promise((resolve, reject) => {
-			request(characterUrl, (charError, charResponse, charBody) => {
-				if (charError) {
-					reject(charError);
-					return;
-				}
-			if (charResponse.statusCode === 200) {
-				const character = JSON.parse(charBody);
-				resolve(character.name);
-			}
-			});
-		});
-	});
-    
+    const characters = movie.characters;
+    const promises = characters.map(characterUrl => {
+      return new Promise((resolve, reject) => {
+        request(characterUrl, (charError, charResponse, charBody) => {
+          if (charError) {
+            reject(charError);
+            return;
+          }
+          if (charResponse.statusCode === 200) {
+            const character = JSON.parse(charBody);
+            resolve(character.name);
+          }
+        });
+      });
+    });
+
     Promise.all(promises)
       .then(names => {
-		  names.forEach(name => console.log(name));
+        names.forEach(name => console.log(name));
       })
       .catch(error => {
         console.error(error);
