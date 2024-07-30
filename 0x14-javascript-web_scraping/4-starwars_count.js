@@ -16,15 +16,11 @@ request(url, (error, response, body) => {
     // Parse the response body as JSON
     const filmsData = JSON.parse(body).results;
     // Check for  Wedge Antilles
-    for (const film of filmsData) {
-      const characters = film.characters;
-      for (const character in characters) {
-        const characterId = character.split('/').filter(Boolean).pop();
-        if (characterId === '18') {
-          count = count + 1;
-        }
+    filmsData.forEach(film => {
+        if (film.characters.includes('https://swapi-api.alx-tools.com/api/people/18/')) {
+        count++;
       }
-    }
+    });
     console.log(count);
   }
 });
