@@ -8,6 +8,7 @@ with methods to retrieve and set size
 
 class Rectangle:
     " Complete definition of a rectangle"
+
     def __init__(self, width=0, height=0):
         " Class instantiation "
         self.__width = width
@@ -25,8 +26,7 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-        else:
-            self.__width = value
+        self.__width = value
 
     @property
     def height(self):
@@ -39,6 +39,5 @@ class Rectangle:
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError("height must >= 0")
-        else:
-            self.__height = value
+            raise ValueError("height must be >= 0")
+        self.__height = value
