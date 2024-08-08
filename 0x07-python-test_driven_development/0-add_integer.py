@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 
 def add_integer(a, b=98):
-    """
-    Adds two integers and returns the result
-    """
+    """ Add two integers and returns the result."""
     if isinstance(a, float) or isinstance(b, float):
         a = int(a)
         b = int(b)
