@@ -16,7 +16,8 @@ Are you okay?
 Yes.
 
 Test with text that is a string:
->>> text_indentation("This is a string with different punctuations. Here is another? And one more: Done!")
+>>> text_indentation("This is a string with different punctuations. "
+... "Here is another? And one more: Done!")
 This is a string with different punctuations.
 
 Here is another?
