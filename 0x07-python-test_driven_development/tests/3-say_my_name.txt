@@ -1,4 +1,9 @@
->>> from my_module import say_my_name
+The 'say_my_name' module
+
+Using 'say_my_name'
+
+import the say_my_name function:
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
 >>> say_my_name("John", "Smith")
 My name is John Smith
 >>> say_my_name("Bob")
