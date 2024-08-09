@@ -1,6 +1,11 @@
 #!/usr/bin/python3
+""" Divides elelments of a matrix"""
+
+
 def matrix_divided(matrix, div):
-    """Divides all the elements of a matrix"""
+    """ Function that divides all the elements of a matrix
+    Return: A new matrix
+    """
     if not all(isinstance(row, list) for row in matrix):
         raise TypeError('''
         matrix must be a matrix
