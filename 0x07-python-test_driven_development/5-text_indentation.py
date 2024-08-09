@@ -28,4 +28,7 @@ def text_indentation(text):
         i += 1
 
     # Strip leading/trailing spaces and ensure correct formatting
-    print('\n'.join(line.strip() for line in result.splitlines()))
+    print('\n'.join(
+         line.strip() for line in result.splitlines()
+         if line.strip() != ''
+    ))
