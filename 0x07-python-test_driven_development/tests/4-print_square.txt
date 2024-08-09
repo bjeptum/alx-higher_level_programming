@@ -1,0 +1,58 @@
+The 'print_square' module
+Using 'print_square'
+
+import the print_square function:
+    >>> print_square = __import__('3-print_square').print_square
+
+Test with size 4:
+>>> print_square(4)
+####
+####
+####
+####
+<BLANKLINE>
+
+Test with size 10:
+>>> print_square(10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+<BLANKLINE>
+
+Test with size 0:
+>>> print_square(0)
+<BLANKLINE>
+
+Test with size 1:
+>>> print_square(1)
+#
+<BLANKLINE>
+
+Test with invalid sizes:
+>>> try:
+...     print_square(-1)
+... except Exception as e:
+...     print(e)
+size must be >= 0
+<BLANKLINE>
+
+>>> try:
+...     print_square(1.5)
+... except Exception as e:
+...     print(e)
+size must be an integer
+<BLANKLINE>
+
+>>> try:
+...     print_square("three")
+... except Exception as e:
+...     print(e)
+size must be an integer
+<BLANKLINE>
