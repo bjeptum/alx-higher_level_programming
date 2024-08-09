@@ -1,0 +1,51 @@
+The 'text_indentation' module
+
+Using 'text_indentation'
+
+import the text_indentation function:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Test with regular text:
+>>> text_indentation("Hello world. This is a test. Are you okay? Yes.")
+Hello world.
+
+This is a test.
+
+Are you okay?
+
+Yes.
+
+Test with text that is a string:
+>>> text_indentation("This is a string with different punctuations. Here is another? And one more: Done!")
+This is a string with different punctuations.
+
+Here is another?
+
+And one more:
+
+Done!
+
+Test with text that is not a string:
+>>> try:
+...     text_indentation(123)
+... except Exception as e:
+...     print(e)
+text must be a string
+
+Test with text containing a blank line:
+>>> text_indentation("This is a test.\n\nDoes it work? \n\nYes, it does.")
+This is a test.
+
+
+Does it work?
+
+
+Yes, it does.
+
+Test with missing argument:
+>>> try:
+...     text_indentation()
+... except Exception as e:
+...     print(e)
+text_indentation() missing 1 required positional argument: 'text'
+
