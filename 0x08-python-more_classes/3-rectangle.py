@@ -54,12 +54,8 @@ class Rectangle:
         else:
             return 2 * (self.__width + self.__height)
 
-    def print(self):
-        " Prints in stdout the rectangle with #"
-        if self.__width == 0 or self__height == 0:
-            print("")
-        else:
-            for _ in range(self.__position[1]):
-                print("")
-            for _ in range(self.__size):
-                print(" " * self.__position[0] + "#" * self.__size)
+    def __str__(self):
+        "Returns a string representation of the rectangle"
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        return '\n'.join('#' * self.__width for _ in range(self.__height))
