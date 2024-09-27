@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import sys
 
 # Function to check if it's safe to place a queen at board[row][col]
